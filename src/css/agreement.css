@@ -1,0 +1,33 @@
+.bg-body {
+    background-color: rgb(212, 204, 194);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header {
+    background-color: rgb(16, 95, 134);
+    color: white;
+}
+
+.content {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+}
+
+.icon-link {
+    color: white;
+    margin-left: 10px;
+}
+
+#titleWelcome {
+    color: rgb(41, 116, 162);
+}
+
