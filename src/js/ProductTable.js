@@ -1,24 +1,52 @@
-fetch("../json/product.json")
-    .then(function (response) {
-        return response.json();
-    })
-    .then(function (products) {
-        let placeholder = document.querySelector("#data-output");
-        let out = "";
-        for (let product of products) {
-            out += `
-            <tr>
-              <td>${product.Status}</td>
-              <td>${product.Quote_Number}</td>
-              <td>${product.Agreement_Name}</td>
-              <td>${product.Agreement_Type}</td>
-              <td>${product.Distributor_Name}</td>
-              <td>${product.Effective_Date}</td>
-              <td>${product.Expiration_Date}</td>
-              <td>${product.Created_Date}</td>
-              <td>${product.Days_Until_Expiration}</td>
-            </tr>
-        `;
-        }
-        placeholder.innerHTML = out;
-    });
+const columnDefs = [
+    { field: 'Status' },
+    { field: 'Quote Number', minWidth: 180 },
+    { field: 'Agreement Name', minWidth: 200 },
+    { field: 'Agreement Type', minWidth: 200 },
+    { field: 'Distributor Name', minWidth: 200 },
+    { field: 'Effective Date', minWidth: 200 },
+    { field: 'Effective Date', minWidth: 200 },
+    { field: 'Expiration Date', minWidth: 180 },
+    { field: 'Create Date', minWidth: 200 },
+    { field: 'Days Until Expiration', minWidth: 200 }
+];
+
+const gridOptions = {
+    columnDefs: columnDefs,
+    pagination: true,
+    paginationPageSize: 25,
+    defaultColDef: {
+        flex: 1,
+        minWidth: 100,
+        enableValue: true,
+        enableRowGroup: false,
+        enablePivot: false,
+        sortable: true,
+        filter: true,
+    },
+    sideBar: {
+        toolPanels: [
+            {
+                id: 'columns',
+                labelDefault: 'Columns',
+                labelKey: 'columns',
+                iconKey: 'columns',
+                toolPanel: 'agColumnsToolPanel',
+                toolPanelParams: {
+                    suppressRowGroups: true,
+                    suppressValues: true,
+                }
+            }
+        ]
+    },
+};
+
+// setup the grid after the page has finished loading
+document.addEventListener('DOMContentLoaded', function () {
+    var gridDiv = document.querySelector('#myGrid');
+    new agGrid.Grid(gridDiv, gridOptions);
+
+    fetch('../json/product.json')
+        .then((response) => response.json())
+        .then((data) => gridOptions.api.setRowData(data));
+});
