@@ -33,7 +33,7 @@ const columnDefs = [
     { field: 'Effective Date', minWidth: 200, type: ['dateColumn', 'nonEditableColumn'], headerClass: 'header-custom-ag' },
     { field: 'Effective Date', minWidth: 200, type: ['dateColumn', 'nonEditableColumn'], headerClass: 'header-custom-ag' },
     { field: 'Expiration Date', minWidth: 180, type: ['dateColumn', 'nonEditableColumn'], headerClass: 'header-custom-ag' },
-    { field: 'Create Date', minWidth: 200, headerClass: 'header-custom-ag' },
+    { field: 'Created Date', minWidth: 200, headerClass: 'header-custom-ag' },
     { field: 'Days Until Expiration', minWidth: 200, type: 'numberColumn', headerClass: 'header-custom-ag' }
 ];
 
