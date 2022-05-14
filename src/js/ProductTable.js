@@ -104,7 +104,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var gridDiv = document.querySelector('#myGrid');
     new agGrid.Grid(gridDiv, gridOptions);
 
-    fetch('../../product.json')
+    // fetch('../../product.json')
+    //     .then((response) => response.json())
+    //     .then((data) => gridOptions.api.setRowData(data));
+
+    fetch('https://kimphucnguyen.github.io/HTML_Ex2/product.json')
         .then((response) => response.json())
         .then((data) => gridOptions.api.setRowData(data));
 });
