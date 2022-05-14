@@ -1,6 +1,6 @@
 const columnDefs = [
     {
-        field: 'Status',
+        field: 'Status', minWidth: 150,
         cellStyle: params => {
             if (params.value === 'Invalid') {
                 return { color: 'red' };
@@ -12,17 +12,29 @@ const columnDefs = [
                 return { color: 'gray' };
             }
             return null;
-        }
+        },
+        cellRenderer: params => {
+            if (params.value === 'Invalid') {
+                return params.value + ' <span><i class="fa fa-square-plus"></i></span>';
+            }
+            if (params.value === 'Published') {
+                return params.value + ' <span><i class="fa-solid fa-square-check"></i></span>';
+            }
+            if (params.value === 'Pending') {
+                return params.value + ' <span><i class="fa-solid fa-circle-minus"></i></span>';
+            }
+            return null;
+        }, headerClass: 'header-custom-ag'
     },
-    { field: 'Quote Number', minWidth: 180 },
-    { field: 'Agreement Name', minWidth: 200, cellStyle: {color: 'blue'} },
-    { field: 'Agreement Type', minWidth: 200 },
-    { field: 'Distributor Name', minWidth: 200 },
-    { field: 'Effective Date', minWidth: 200, type: ['dateColumn', 'nonEditableColumn'] },
-    { field: 'Effective Date', minWidth: 200, type: ['dateColumn', 'nonEditableColumn'] },
-    { field: 'Expiration Date', minWidth: 180, type: ['dateColumn', 'nonEditableColumn'] },
-    { field: 'Create Date', minWidth: 200 },
-    { field: 'Days Until Expiration', minWidth: 200, type: 'numberColumn' }
+    { field: 'Quote Number', minWidth: 180, headerClass: 'header-custom-ag' },
+    { field: 'Agreement Name', minWidth: 200, cellStyle: { color: 'blue' }, headerClass: 'header-custom-ag' },
+    { field: 'Agreement Type', minWidth: 200, headerClass: 'header-custom-ag' },
+    { field: 'Distributor Name', minWidth: 200, headerClass: 'header-custom-ag' },
+    { field: 'Effective Date', minWidth: 200, type: ['dateColumn', 'nonEditableColumn'], headerClass: 'header-custom-ag' },
+    { field: 'Effective Date', minWidth: 200, type: ['dateColumn', 'nonEditableColumn'], headerClass: 'header-custom-ag' },
+    { field: 'Expiration Date', minWidth: 180, type: ['dateColumn', 'nonEditableColumn'], headerClass: 'header-custom-ag' },
+    { field: 'Create Date', minWidth: 200, headerClass: 'header-custom-ag' },
+    { field: 'Days Until Expiration', minWidth: 200, type: 'numberColumn', headerClass: 'header-custom-ag' }
 ];
 
 const gridOptions = {
