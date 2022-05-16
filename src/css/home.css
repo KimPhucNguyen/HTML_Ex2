@@ -42,7 +42,6 @@
 
 .description {
     margin-top: 10px;
-    margin-left: 100px;
 }
 
 .content-tabs {
@@ -71,4 +70,8 @@
 
 #btnSeeAll {
     text-align: right;
+}
+
+body {
+    overflow: hidden;
 }
