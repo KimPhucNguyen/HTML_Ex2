@@ -32,7 +32,7 @@
 }
 
 #myGrid {
-    height: 80vh;
+    height: 60vh;
     width: 100%;
 }
 
@@ -67,7 +67,7 @@
 
 .description {
     margin-top: 10px;
-    margin-left: 100px;
+
 }
 
 .bc-icons .breadcrumb-item+.breadcrumb-item::before {
@@ -76,4 +76,8 @@
 
 .bc-icons .breadcrumb-item.active {
     color: #eeeeee;
+}
+
+body {
+    overflow: hidden;
 }
