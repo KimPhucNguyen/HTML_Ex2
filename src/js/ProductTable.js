@@ -1,6 +1,6 @@
 const columnDefs = [
     {
-        field: 'Status', minWidth: 150,
+        field: 'Status', width: 140,
         cellStyle: params => {
             if (params.value === 'Invalid') {
                 return { color: 'red' };
@@ -26,15 +26,14 @@ const columnDefs = [
             return null;
         }, headerClass: 'header-custom-ag'
     },
-    { field: 'Quote Number', minWidth: 180, headerClass: 'header-custom-ag' },
-    { field: 'Agreement Name', minWidth: 200, cellStyle: { color: 'blue' }, headerClass: 'header-custom-ag' },
-    { field: 'Agreement Type', minWidth: 200, headerClass: 'header-custom-ag' },
-    { field: 'Distributor Name', minWidth: 200, headerClass: 'header-custom-ag' },
-    { field: 'Effective Date', minWidth: 200, type: ['dateColumn', 'nonEditableColumn'], headerClass: 'header-custom-ag' },
-    { field: 'Effective Date', minWidth: 200, type: ['dateColumn', 'nonEditableColumn'], headerClass: 'header-custom-ag' },
-    { field: 'Expiration Date', minWidth: 180, type: ['dateColumn', 'nonEditableColumn'], headerClass: 'header-custom-ag' },
-    { field: 'Created Date', minWidth: 200, headerClass: 'header-custom-ag' },
-    { field: 'Days Until Expiration', minWidth: 200, type: 'numberColumn', headerClass: 'header-custom-ag' }
+    { field: 'Quote Number', width: 160, headerClass: 'header-custom-ag' },
+    { field: 'Agreement Name', width: 160, cellStyle: { color: 'blue' }, headerClass: 'header-custom-ag' },
+    { field: 'Agreement Type', width: 160, headerClass: 'header-custom-ag' },
+    { field: 'Distributor Name', width: 160, headerClass: 'header-custom-ag' },
+    { field: 'Effective Date', width: 160, type: ['dateColumn', 'nonEditableColumn'], headerClass: 'header-custom-ag' },
+    { field: 'Expiration Date', width: 160, type: ['dateColumn', 'nonEditableColumn'], headerClass: 'header-custom-ag' },
+    { field: 'Created Date', width: 160, type: ['dateColumn', 'nonEditableColumn'], headerClass: 'header-custom-ag' },
+    { field: 'Days Until Expiration', width: 160, type: 'numberColumn', headerClass: 'header-custom-ag' }
 ];
 
 const gridOptions = {
