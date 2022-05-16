@@ -32,9 +32,29 @@
 }
 
 #myGrid {
-    height: 100vh
+    height: 80vh;
+    width: 100%;
 }
 
 .header-custom-ag {
     color: rgb(41, 116, 162);
-  }
+}
+.ag-set-filter-list {
+    width: 500px !important;
+}
+.link {
+    margin-top: 10px;
+}
+
+.description {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.bc-icons .breadcrumb-item+.breadcrumb-item::before {
+    content: none;
+}
+
+.bc-icons .breadcrumb-item.active {
+    color: #eeeeee;
+}

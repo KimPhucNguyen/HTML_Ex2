@@ -36,6 +36,15 @@
     color: rgb(41, 116, 162);
 }
 
+.link {
+    margin-top: 10px;
+}
+
+.description {
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
 .content-tabs {
     background-color: rgb(248, 246, 242);
     border-radius: 10px;
@@ -51,15 +60,15 @@
     margin-left: 10px;
 }
 
-.titleContent{
+.titleContent {
     color: rgb(16, 95, 134);
     font-family: sans-serif;
 }
 
-#workflow{
+#workflow {
     min-height: 150px;
 }
 
-#btnSeeAll{
+#btnSeeAll {
     text-align: right;
 }
