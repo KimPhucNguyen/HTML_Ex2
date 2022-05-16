@@ -32,13 +32,16 @@
 }
 
 #myGrid {
-    height: 100vh
+    height: 80vh;
+    width: 100%;
 }
 
 .header-custom-ag {
     color: rgb(41, 116, 162);
 }
-
+.ag-set-filter-list {
+    width: 500px !important;
+}
 .link {
     margin-top: 10px;
 }
